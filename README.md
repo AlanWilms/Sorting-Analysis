@@ -15,6 +15,10 @@ I wrote a program (see the attached code) that took in an unsorted integer array
 
 The program creates two additional copies of the unsorted array and runs a merge sort, quick sort, and finally the radix sort. The merge sort used is the standard algorithm while the quick sort uses a random partition to improve the expected worst-case runtime to match that of the expected case. Note that that we are performing the radix sort with bases of 10, ie it creates 10 buckets (one for each integer digit) for sorting each decimal place. The number of comparisons and very detailed run time in milliseconds are printed out for each. Lastly, the sorted array is written to an output file for an easy way to create sorted inputs.
 
+![Terminal 1](./Terminal1.png)
+
+![Terminal 2](./Terminal2.png)
+
 To test general expected cases, I ran my program 10 times for an input of size 100 and a max input value of size 10. I did the same for an input size of 10000 and a max input value of size 100 in hopes that the differences in the runtimes would become more apparent.
 Additionally, I ran the program on arrays of 10000 integers in both ascending and descending sorted order.
 
@@ -40,6 +44,10 @@ Beyond the radix sort observations, it seems as though quick sort struggles with
 Merge sort was consistent and, while was outperformed by radix sort in all but one case, it was still largely effective and likewise unfazed by the ascending/descending tendency and most size changes.
 
 See the attached spreadsheet for the full trial data. 
+
+![Graph 1](./Graph1.png)
+
+![Graph 2](./Graph2.png)
 
 ## Conclusion:
 
