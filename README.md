@@ -52,3 +52,42 @@ See the attached spreadsheet for the full trial data.
 ## Conclusion:
 
 Radix sort performs well generally. It performs especially well for extremely large input sizes that are constrained to a small maximum value. On the other hand, this algorithm struggles with a maximum value that is much larger than its input size due to the unused many buckets created in the counting sort implementation.
+
+### 1: Input Size: 10000 // Max Value: 100 (10 Trials, Randomized) ###
+Trial | Merge Sort runtime (ms) | Quick Sort runtime (ms) | Radix Sort runtime (ms) | MS comparisons | QS comparisons
+----- | ----------------------- | ------------------------| ----------------------- | -------------- | --------------
+1	| 2.14775	| 4.45295	| 0.496406	| 133616	| 572462
+3 | 2.08252 | 4.06816 | 0.424951 | 133616 | 577376
+4 | 1.75073 | 4.08737 | 0.505804 | 133616 | 586059
+5 | 1.85067 | 4.22255 | 0.516858 | 133616 | 587023
+6 | 2.26787 | 4.29737 | 0.579767 | 133616 | 573471
+7 | 2.5134 | 4.46708 | 0.541797 | 133616 | 569270
+8 | 1.75183 | 4.01952 | 0.439128 | 133616 | 575872
+9 | 1.88071 | 4.07081 | 0.533342 | 133616 | 589803
+10 | 1.87735 | 4.45439 | 0.441303 | 133616 | 578883
+<b>Average</b> | <b>2.027047</b> | <b>4.253857</b> | <b>0.5057824</b> | <b>133616</b> | <b>578579.4</b>
+
+### 2: Input Size: 100 // Max Value: 10 (10 Trials, Randomized) ###
+Trial | Merge Sort runtime (ms) | Quick Sort runtime (ms) | Radix Sort runtime (ms) | MS comparisons | QS comparisons
+----- | ----------------------- | ------------------------| ----------------------- | -------------- | --------------
+1 | 0.030155 | 0.01647 | 0.012953 | 672 | 740
+2 | 0.026623 | 0.012673 | 0.006616 | 672 | 924
+3 | 0.030469 | 0.017568 | 0.01236 | 672 | 975
+4 | 0.018462 | 0.010846 | 0.007835 | 672 | 918
+5 | 0.021117 | 0.012535 | 0.00892 | 672 | 934
+6 | 0.03021 | 0.017414 | 0.012994 | 672 | 854
+7 | 0.02133 | 0.011457 | 0.011736 | 672 | 801
+8 | 0.030868 | 0.016993 | 0.01724 | 672 | 780
+9 | 0.030531 | 0.017118 | 0.018079 | 672 | 817
+10 | 0.029434 | 0.018068 | 0.019964 | 672 | 869
+<b>Average</b> | <b>0.0269199</b> | <b>0.0151142</b> | <b>0.0128697</b> | <b>672</b> | <b>861.2</b>
+
+### 3: Input Size: 100000 // Max Value: 10 (5 Trials, Randomized) ###
+Trial | Merge Sort runtime (ms) | Quick Sort runtime (ms) | Radix Sort runtime (ms) | MS comparisons | QS comparisons
+----- | ----------------------- | ------------------------| ----------------------- | -------------- | --------------
+1 | 16.4995 | 2482.69 | 2.82288 | 1668928 | 455001627
+2 | 14.5706 | 2483.09 | 3.02763 | 1668928 | 454851054
+3 | 15.0043 | 2540.29 | 3.12475 | 1668928 | 454994387
+4 | 14.5458 | 2506.95 | 2.70136 | 1668928 | 454899994
+5 | 15.7085 | 2560.41 | 3.91208 | 1668928 | 454867684
+<b>Average</b> | <b>15.26574</b> | <b>2514.686</b> | <b>3.11774</b> | <b>1668928</b> | <b>454922949.2</b>
